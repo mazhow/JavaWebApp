@@ -52,5 +52,9 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is 18 multiplied by 15"), containsString("270"));
     }
 
+    @Test
+    public void returnsColourOfBanana() throws Exception {
+        assertThat(queryProcessor.process("what colour is a banana"), containsString("yellow"));
+    }
 
 }
