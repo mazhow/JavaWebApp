@@ -23,16 +23,16 @@ public class QueryProcessor {
         }
         if (query.toLowerCase().contains("largest")) {
 
-            String[] splitString = query.split(":")[1].trim().split(",");
+            String[] splitStringA = query.split(":");
+            String[] splitString = splitStringA[2].trim().split(",");
+
             int size = splitString.length;
             int [] arr = new int [size];
             for(int i=0; i<size; i++) {
                 arr[i] = Integer.parseInt(splitString[i].trim());
             }
-
             Arrays.sort(arr);
             return Integer.toString(arr[arr.length-1]);
-
         }
         if (query.toLowerCase().contains("plus")) {
 
@@ -59,13 +59,14 @@ public class QueryProcessor {
         }
         if (query.toLowerCase().contains("prime")) {
 
+            String[] splitStringA = query.split(":");
+
             List<String> splitString =
-                    Arrays.asList(query.split(":")[1].trim().split(","));
+                    Arrays.asList(splitStringA[2].trim().split(","));
 
             int k=0;
 
             List<String> resultString = new ArrayList<>();
-
             for (String numToCheck : splitString) {
                 if (isPrime(Integer.parseInt(numToCheck.trim()))) {
                     resultString.add(numToCheck.trim());
