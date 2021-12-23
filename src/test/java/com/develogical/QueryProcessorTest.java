@@ -38,7 +38,7 @@ public class QueryProcessorTest {
     @Test
     public void returnsLargerOfFollowingNumbers() throws Exception {
 //        assertThat(queryProcessor.process("largest:30,237,32,28"), containsString("237"));
-        assertThat(queryProcessor.process("largest:813,65"), containsString("813"));
+        assertThat(queryProcessor.process("largest: 89, 382"), containsString("382"));
 
     }
 

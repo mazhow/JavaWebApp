@@ -25,7 +25,7 @@ public class QueryProcessor {
             int size = splitString.length;
             int [] arr = new int [size];
             for(int i=0; i<size; i++) {
-                arr[i] = Integer.parseInt(splitString[i]);
+                arr[i] = Integer.parseInt(splitString[i].trim());
             }
 
             Arrays.sort(arr);
