@@ -34,4 +34,15 @@ public class QueryProcessorTest {
     public void isNotCaseSensitive() throws Exception {
         assertThat(queryProcessor.process("shakespeare"), containsString("playwright"));
     }
+
+    @Test
+    public void returnsLargerOfFollowingNumbers() throws Exception {
+        assertThat(queryProcessor.process("largest:10,1"), containsString("10"));
+    }
+
+//    @Test
+//    public void returnsSumOfTwoNumbers() throws Exception {
+//        assertThat(queryProcessor.process("plus 1 1"), containsString("2"));
+//    }
+
 }

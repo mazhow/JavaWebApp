@@ -1,5 +1,7 @@
 package com.develogical;
 
+import java.util.Arrays;
+
 public class QueryProcessor {
 
     public String process(String query) {
@@ -16,6 +18,12 @@ public class QueryProcessor {
         }
         if (query.toLowerCase().contains("name")) {
             return "MarieSidd";
+        }
+        if (query.toLowerCase().contains("largest")) {
+            //what is the largest:2064,2061,2042,2052:
+            String[] splitString = query.split(":")[1].split(",");
+            Arrays.sort(splitString);
+            return splitString[splitString.length-1];
         }
         return "";
     }
