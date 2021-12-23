@@ -57,4 +57,11 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what colour is a banana"), containsString("yellow"));
     }
 
+    @Test
+    public void returnsJamesBondActor() throws Exception {
+        assertThat(queryProcessor.process("james Bond in the film Dr No"), containsString("sean connery"));
+    }
+
+
+
 }

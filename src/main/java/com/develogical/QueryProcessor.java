@@ -47,8 +47,10 @@ public class QueryProcessor {
             return Integer.toString(secondNum * firstNum);
         }
         if (query.toLowerCase().contains("colour is a banana")) {
-
             return "yellow";
+        }
+        if (query.toLowerCase().contains("james bond")) {
+            return "sean connery";
         }
         return "";
     }
