@@ -52,6 +52,11 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("james bond")) {
             return "sean connery";
         }
+        if (query.toLowerCase().contains("eiffel tower")) {
+            return "Paris";
+        }
+
+
         return "";
     }
 }
