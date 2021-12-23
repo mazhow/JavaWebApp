@@ -62,12 +62,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("james Bond in the film Dr No"), containsString("sean connery"));
     }
 
-//    @Test
-//    public void returnsPrimeNumbers() throws Exception {
-////        assertThat(queryProcessor.process("largest:30,237,32,28"), containsString("237"));
-//        assertThat(queryProcessor.process("largest: 89, 382"), containsString("382"));
-//        assertThat(queryProcessor.process("largest: 187, 237, 26, 55"), containsString("237"));
-//    }
+    @Test
+    public void returnsPrimeNumbers() throws Exception {
+        assertThat(queryProcessor.process("primes: 107, 349, 399, 400"), containsString("107, 349"));
+    }
 
     @Test
     public void returnsCityParis() throws Exception {

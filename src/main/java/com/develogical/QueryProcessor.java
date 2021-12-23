@@ -1,6 +1,8 @@
 package com.develogical;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class QueryProcessor {
 
@@ -55,8 +57,31 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("eiffel tower")) {
             return "Paris";
         }
+        if (query.toLowerCase().contains("prime")) {
 
+            List<String> splitString =
+                    Arrays.asList(query.split(":")[1].trim().split(","));
+
+            int k=0;
+
+            List<String> resultString = new ArrayList<>();
+
+            for (String numToCheck : splitString) {
+                if (isPrime(Integer.parseInt(numToCheck.trim()))) {
+                    resultString.add(numToCheck.trim());
+                }
+            }
+            return resultString.toString();
+        }
 
         return "";
+    }
+
+    boolean isPrime(int n) {
+        for(int i=2;2*i<n;i++) {
+            if(n%i==0)
+                return false;
+        }
+        return true;
     }
 }
