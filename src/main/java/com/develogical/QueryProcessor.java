@@ -8,6 +8,12 @@ public class QueryProcessor {
                     "English poet, playwright, and actor, widely regarded as the greatest " +
                     "writer in the English language and the world's pre-eminent dramatist.";
         }
+        if (query.toLowerCase().contains("hopper")) {
+            return "Grace Brewster Murray Hopper was an American computer scientist and " +
+                    "United States Navy rear admiral. One of the first programmers of the " +
+                    "Harvard Mark I computer, she was a pioneer of computer programming " +
+                    "who invented one of the first linkers.";
+        }
         return "";
     }
 }
