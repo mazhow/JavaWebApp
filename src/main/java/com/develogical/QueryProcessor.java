@@ -21,7 +21,7 @@ public class QueryProcessor {
         }
         if (query.toLowerCase().contains("largest")) {
 
-            String[] splitString = query.split(":")[1].split(",");
+            String[] splitString = query.split(":")[1].trim().split(",");
             int size = splitString.length;
             int [] arr = new int [size];
             for(int i=0; i<size; i++) {
