@@ -20,11 +20,23 @@ public class QueryProcessor {
             return "MarieSidd";
         }
         if (query.toLowerCase().contains("largest")) {
-            //what is the largest:2064,2061,2042,2052:
+
             String[] splitString = query.split(":")[1].split(",");
-            Arrays.sort(splitString);
-            return splitString[splitString.length-1];
+            int size = splitString.length;
+            int [] arr = new int [size];
+            for(int i=0; i<size; i++) {
+                arr[i] = Integer.parseInt(splitString[i]);
+            }
+
+            Arrays.sort(arr);
+            return Integer.toString(arr[arr.length-1]);
+
         }
+//        if (query.toLowerCase().contains("plus")) {
+//            String[] splitString = query.split("plus")[0],[1];
+//            Arrays.sort(splitString);
+//            return splitString[splitString.length-1];
+//        }
         return "";
     }
 }

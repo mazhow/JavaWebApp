@@ -37,12 +37,12 @@ public class QueryProcessorTest {
 
     @Test
     public void returnsLargerOfFollowingNumbers() throws Exception {
-        assertThat(queryProcessor.process("largest:10,1"), containsString("10"));
+        assertThat(queryProcessor.process("largest:30,237,32,28"), containsString("237"));
     }
 
-//    @Test
-//    public void returnsSumOfTwoNumbers() throws Exception {
-//        assertThat(queryProcessor.process("plus 1 1"), containsString("2"));
-//    }
+    @Test
+    public void returnsSumOfTwoNumbers() throws Exception {
+        assertThat(queryProcessor.process("plus 1 1"), containsString("2"));
+    }
 
 }
