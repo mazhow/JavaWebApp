@@ -36,9 +36,15 @@ public class QueryProcessor {
 
             int secondNum = Integer.parseInt(query.split("plus")[1].trim());
             int firstNum = Integer.parseInt(query.split("plus")[0].split("is")[1].trim());
-            //what is 17 plus 1
 
             return Integer.toString(secondNum + firstNum);
+        }
+        if (query.toLowerCase().contains("multiplied by")) {
+
+            int secondNum = Integer.parseInt(query.split("multiplied by")[1].trim());
+            int firstNum = Integer.parseInt(query.split("multiplied by")[0].split("is")[1].trim());
+
+            return Integer.toString(secondNum * firstNum);
         }
         return "";
     }

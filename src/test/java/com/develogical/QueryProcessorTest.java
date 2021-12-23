@@ -45,4 +45,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is 17 plus 1"), containsString("18"));
     }
 
+    @Test
+    public void returnsProductOfTwoNumbers() throws Exception {
+        assertThat(queryProcessor.process("what is 18 multiplied by 15"), containsString("270"));
+    }
+
+
 }
