@@ -15,7 +15,7 @@ public class QueryProcessor {
                     "who invented one of the first linkers.";
         }
         if (query.toLowerCase().contains("name")) {
-            return "MyTeam";
+            return "MarieSidd";
         }
         return "";
     }
