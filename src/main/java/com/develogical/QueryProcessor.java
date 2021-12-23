@@ -32,11 +32,14 @@ public class QueryProcessor {
             return Integer.toString(arr[arr.length-1]);
 
         }
-//        if (query.toLowerCase().contains("plus")) {
-//            String[] splitString = query.split("plus")[0],[1];
-//            Arrays.sort(splitString);
-//            return splitString[splitString.length-1];
-//        }
+        if (query.toLowerCase().contains("plus")) {
+
+            int secondNum = Integer.parseInt(query.split("plus")[1].trim());
+            int firstNum = Integer.parseInt(query.split("plus")[0].split("is")[1].trim());
+            //what is 17 plus 1
+
+            return Integer.toString(secondNum + firstNum);
+        }
         return "";
     }
 }

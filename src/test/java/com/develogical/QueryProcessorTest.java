@@ -42,7 +42,7 @@ public class QueryProcessorTest {
 
     @Test
     public void returnsSumOfTwoNumbers() throws Exception {
-        assertThat(queryProcessor.process("plus 1 1"), containsString("2"));
+        assertThat(queryProcessor.process("what is 17 plus 1"), containsString("18"));
     }
 
 }
